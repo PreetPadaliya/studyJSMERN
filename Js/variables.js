@@ -13,4 +13,10 @@ console.table([accountId , accountEmail , accountPassword , accountCity , accont
 
 console.log(accountId);
 console.log(` Hello my id is ${accountId} `); // Right way to write //
+ 
+//datatypes
+
+//typeof null = "object" (this is a bug in JavaScript)
+//typeof undefined = "undefined"
+//typeof NaN = "number" (this is a bug in JavaScript) [NaN = Not a Number]
 
