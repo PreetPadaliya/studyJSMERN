@@ -14,7 +14,7 @@ const regularUser = {
             firstname : "Preet",
             lastname : "Padaliya"
         }
-    }
+    }  
 }
 // console.log(regularUser.fullname.userfullname.firstname);
 
