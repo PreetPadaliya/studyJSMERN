@@ -1,0 +1,17 @@
+*{
+    background-color: cadetblue;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+#searchBtn {
+    padding: 8px 12px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    border-radius: 8px;
+    
+}
+#searchBtn:hover {
+    background: #00c6ff;
+}
+
