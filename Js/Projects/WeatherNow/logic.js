@@ -1,4 +1,4 @@
-const apiKey = "bd5e378503939ddaee76f12ad7a97608";
+const apiKey = "3045dd712ffe6e702e3245525ac7fa38";
 const searchBtn = document.getElementById("searchBtn");
 const cityInput = document.getElementById("cityInput");
 
@@ -6,7 +6,7 @@ searchBtn.addEventListener("click", getWeather);
 
 function getWeather() {
   const city = cityInput.value;
-  if (city === "") {
+  if (city === "") {    
     alert("Please enter a city name!");
     return;
   }
@@ -23,8 +23,6 @@ function getWeather() {
       document.getElementById("cityName").textContent = `${data.name}, ${data.sys.country}`;
       document.getElementById("description").textContent = data.weather[0].description;
       document.getElementById("temperature").textContent = `${data.main.temp}°C`;
-      document.getElementById("humidity").textContent = data.main.humidity;
-      document.getElementById("wind").textContent = data.wind.speed;
     })
     .catch(error => {
       alert(error.message);
