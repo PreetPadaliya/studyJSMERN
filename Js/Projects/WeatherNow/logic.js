@@ -19,10 +19,14 @@ function getWeather() {
       return response.json();
     })
     .then(data => {
-      document.getElementById("weatherResult").classList.remove("hidden");
+      document.getElementById("weatherResult").style.display = "block";
       document.getElementById("cityName").textContent = `${data.name}, ${data.sys.country}`;
       document.getElementById("description").textContent = data.weather[0].description;
       document.getElementById("temperature").textContent = `${data.main.temp}°C`;
+      document.getElementById("pressure").textContent = `Pressure: ${data.main.pressure}`;
+      document.getElementById("windSpeed").textContent = `Wind Speed: ${data.wind.speed}`;
+      document.getElementById("windDeg").textContent = `Wind Deg: ${data.wind.deg}`;
+      document.getElementById("windGust").textContent = `Wind Gust: ${data.wind.gust}`;
     })
     .catch(error => {
       alert(error.message);

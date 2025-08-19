@@ -8,15 +8,19 @@
 </head>
 <body>
   <div class="app">
-    <h1>🌤 WeatherNow</h1>
+    <h1> WeatherNow</h1>
     <div class="search-box">
       <input type="text" id="cityInput" placeholder="Enter city name">
       <button id="searchBtn">Search</button>
     </div>
-    <div id="weatherResult" class="weather-card hidden">
+    <div id="weatherResult" class="weather-card">
       <h2 id="cityName"></h2>
       <p id="description"></p>
       <h3 id="temperature"></h3>
+      <h4 id="pressure"></h4>
+      <p id="windSpeed"></p>
+      <p id="windDeg"></p>
+      <p id="windGust"></p>
     </div>
   </div>
   <script src="logic.js"></script>
