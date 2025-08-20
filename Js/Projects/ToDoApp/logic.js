@@ -61,7 +61,7 @@ function addTask() {
 
   li.appendChild(deleteBtn);
   taskList.appendChild(li);
-
+  
   // Save to localStorage
   saveTasks();
 
@@ -73,7 +73,7 @@ function saveTasks() {
   let tasks = [];
   document.querySelectorAll("#taskList li").forEach(li => {
     // remove "Del" text from li
-    tasks.push(li.firstChild.textContent);
+    tasks.push(li.firstChild.textContent);  
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
