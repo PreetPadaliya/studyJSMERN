@@ -1,15 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   let [number, setNumber] = useState(5)
 
-  function addValue() {
+  function incValue() {
     number = number + 1;
-    if (number > 20) {
-      alert(" Number is greater than 20")
+    if (number > 15) {
+      alert(" Number is greater than 15")
     }
     else {
       setNumber(number);
@@ -30,7 +28,7 @@ function App() {
     <>
 
       <h1>Number Logic :{number}  </h1>
-      <button onClick={addValue}>Increase : {number}</button>
+      <button onClick={incValue}>Increase : {number}</button>
       <br />
       <button onClick={decValue}>Decrease : {number}</button>
       <p>Footer : {number}</p>
