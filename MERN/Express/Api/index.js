@@ -1,14 +1,15 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const app = express();
-const prisma = new PrismaClient();
+ const prisma = new PrismaClient();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.get('/', async(req, res) => {
     try {
-        const users = await prisma.user.findMany();
-        res.json(users);
+         const users = await prisma.user.findMany();
+         res.json(users);
     } catch (error) {
+        console.log(error);
         res.status(500).json({ error: 'Internal Server Error' });
         
     }
@@ -27,6 +28,7 @@ app.get('/add',async(req, res) => {
         });
         res.json(user);
     } catch (error) {
+        console.log(error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
