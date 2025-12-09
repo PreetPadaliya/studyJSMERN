@@ -1,9 +1,9 @@
 // array
 
-const myArr = [0, 1, 2, 3, 4, 5]
-const myHeroes = ["shaktiman", "naagraj"]
+// const myArr = [0, 1, 2, 3, 4, 5]
+// const myHeroes = ["shaktiman", "naagraj"]
 
-const myArr2 = new Array(1, 2, 3, 4)
+// const myArr2 = new Array(1, 2, 3, 4)
 // console.log(myArr[1]);
 
 // Array methods
@@ -38,4 +38,3 @@ const myArr2 = new Array(1, 2, 3, 4)
 // console.log("C ", myArr);
 // console.log(myn2);
 
-let
