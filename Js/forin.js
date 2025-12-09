@@ -1,19 +1,21 @@
-const myObject = {
-    js: 'javascript',
-    cpp: 'C++',
-    rb: "ruby",
-    swift: "swift by apple"
-}
+// iterate over properties of Objects
 
-for (const key in myObject) {
-    //console.log(`${key} shortcut is for ${myObject[key]}`);
-}
+// const myObject = {
+//     js: 'javascript',
+//     cpp: 'C++',
+//     rb: "ruby",
+//     swift: "swift by apple"
+// }
 
-const programming = ["js", "rb", "py", "java", "cpp"]
+// for (const key in myObject) {
+//     //console.log(`${key} shortcut is for ${myObject[key]}`);
+// }
 
-for (const key in programming) {
-    //console.log(programming[key]);
-}
+// const programming = ["js", "rb", "py", "java", "cpp"]
+
+// for (const key in programming) {
+//     //console.log(programming[key]);
+// }
 
 // const map = new Map()
 // map.set('IN', "India")
@@ -24,3 +26,14 @@ for (const key in programming) {
 // for (const key in map) {
 //     console.log(key);
 // }
+
+let Student = {
+    name: "Preet",
+    age: 20,
+    isLoggedIn: false,
+    isPass : true,
+}
+
+for(let i in Student){
+    console.log("key="+i, "value=" + Student[i]);
+}
