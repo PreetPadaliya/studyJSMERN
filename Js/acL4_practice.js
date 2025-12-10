@@ -23,7 +23,7 @@
 // }
 // console.log(items);
 
-//P-3
+//P-3 Theory = push(add-end) , pop(remove-end), ushift(add-start) , shift(remove-start) , splice(anywhere)
 
 let companies = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"]
 
