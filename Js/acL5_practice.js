@@ -29,6 +29,9 @@
 
 // countVowels("ApnaCollege");
 
+//P-3
+//.forEach() is used for (value , index , array) this is used for traversing the array
+
 let arr = [1,2,3,4,5];
 
 arr.forEach(element => {
