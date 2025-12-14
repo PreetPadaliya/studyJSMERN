@@ -17,9 +17,7 @@ const Server = http.createServer((req,res)=>{
     return res.end();
         } 
         else if(req.url === '/Home'){
-            
-            res.write('<body><h1>This is Home Page</h1></body>');
-          
+            res.write('<h1>This is Home Page</h1>'); //We can also write without html structure
             return res.end();
         }
         else if(req.url === '/Men'){
