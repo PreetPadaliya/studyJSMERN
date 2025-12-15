@@ -1,7 +1,6 @@
-const http = require('http');
 const fs = require('fs');
 
-const Srever = http.createServer((req,res)=>{
+const reqHandler  = ((req,res)=>{
     res.setHeader('Content-type','text/html')
     console.log(req.url , req.method)
     if(req.url === '/'){
@@ -29,15 +28,18 @@ return res.end();
         req.on('end',()=>{
             const fullBody = Buffer.concat(body).toString();
             console.log(fullBody);
+            const params = new URLSearchParams(fullBody);
+            const bodyObject = {};
+            for(const [key,value] of params.entries()){
+                bodyObject[key] = value;
+            }
+            console.log(bodyObject);
+            fs.writeFileSync("formdetails.txt",JSON.stringify(bodyObject));
         })
-        fs.writeFileSync("formdetails.txt","Form submitted");
         res.setHeader("Location","/");
         res.statusCode = 302;
-        return res.end
+        return res.end();
     }
 })
 
-const PORT = 3000;
-Srever.listen(PORT,()=>{
-    console.log(`Server is running at http://localhost:${PORT}`);
-})
+module.exports = reqHandler;
