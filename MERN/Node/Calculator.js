@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
             body.push(chunk);
         });
 
-        req.on('end', () => {
+        req.on('end', () => {   
             const fullBody = Buffer.concat(body).toString();
             const params = new URLSearchParams(fullBody);
             const bodyObj = Object.fromEntries(params);
