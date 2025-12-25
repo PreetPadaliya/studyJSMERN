@@ -1,6 +1,8 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+
 
 const server = app.listen(3000, () => {
     console.log('Server running at http://localhost:3000');
@@ -34,6 +36,13 @@ app.get('/contact-us',(req,res,next)=>{
 });
 
 app.post('/contact-us',(req,res,next)=>{
-    console.log("Came in contact us POST middlewrare",req.url , req.method );
+    console.log("First Handling",req.url , req.method , req.body );
+    next();
+});
+
+app.use(bodyParser.urlencoded());
+
+app.post('/contact-us',(req,res,next)=>{
+    console.log("Came in contact us POST middlewrare",req.url , req.method , req.body );
     res.send('<h3>We will contact you soon!</h3>');
 });
