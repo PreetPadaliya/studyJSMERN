@@ -1,11 +1,12 @@
-const express = require('express');
-const userRouter = express.Router();
+const path = require('path'); // Core module
+const express = require('express'); // External module
+const userRouter = express.Router(); 
+
 
 // Define routes for userRouter here
 
 userRouter.get("/",(req,res,next)=>{  
-    res.send(`<h1>Welcome to airbnb</h1>
-        <a href="/host/add-home">Add Home</a>`);
+    res.sendFile(path.join(__dirname,'../' ,'views','home.html'));
 });
 
 module.exports = userRouter;
