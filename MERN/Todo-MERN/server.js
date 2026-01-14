@@ -16,10 +16,12 @@ const app = express();
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
 
 //routes
+app.use('/api/v1/user',require('./routes/userRoute'));
 app.use('/api/v1/test',require('./routes/testRouter'));
 
 //listen to a port
