@@ -1,0 +1,26 @@
+*{
+    background-color: blanchedalmond;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  max-width: 1100px;
+  margin: 0 auto -6rem;
+  padding: 4rem 1rem;
+
+  min-height: 70vh; /* better than height: 100vh */
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+    flex: 1;
+  display: flex;
+  justify-content: center;
+}
