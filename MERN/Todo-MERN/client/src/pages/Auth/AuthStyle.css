@@ -1,0 +1,48 @@
+
+.form-container{
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form{
+    background-color: palegoldenrod;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+   
+}
+
+.Heading{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    color: brown;
+    font-family:monospace;
+}
+
+.login-btn{
+     background-color: saddlebrown;
+     color: white;
+     width: 100%;
+     border: none;
+     height: 40px;
+     border-radius: 5px;
+
+}
+.login-btn:hover{
+    background-color: peru;
+    cursor: pointer;
+}
+p{
+   color: brown;
+    font-family: unset;
+    text-decoration: none;
+}
+.register-link{
+    font-family: unset;
+    text-decoration: none;
+}   
