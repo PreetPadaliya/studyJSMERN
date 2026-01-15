@@ -16,8 +16,8 @@ const Landing = () => {
           Welcome to Todo-MERN, your ultimate task management solution built with the power of the MERN stack.
           Whether you're a busy professional, a student juggling multiple assignments, or someone looking to boost productivity, Todo-MERN has got you covered.
         </p>
-      <Link className="btn red" to="/register">Register Now!</Link>
-      <Link className="btn blue" to="/login">Login Now!</Link>
+      <Link className="btn red" to="/register">Register Now !</Link>
+      <Link className="btn blue" to="/login">Login Now !</Link>
       </div>
       
       <div className='hero-image'>
