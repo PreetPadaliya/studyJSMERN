@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './AuthStyle.css'
+import AuthServices from '../../Services/AuthServices';
 
 
 const Login = () => {
@@ -8,13 +9,15 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     //login handler function
-    const loginHandler = (e) => { 
-        try {
-          e.preventDefault();
-          alert('Login Successful');
-        } catch (error) {
-          console.log(error);
-        }
+    const loginHandler = async(e) => { 
+       try {
+        e.preventDefault();
+        const data = {email, password};
+        const res = await AuthServices.loginUsre(data);
+        console.log(res.data);
+       } catch (error) {
+        console.log(error);
+       }
     }
   return (
    <div className='form-container'>
