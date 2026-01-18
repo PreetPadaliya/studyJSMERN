@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import AuthServices from '../../Services/AuthServices';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -9,9 +10,12 @@ const Register = () => {
         
     
         //register handler function
-        const registerHandler = (e) => { 
+        const registerHandler = async (e) => { 
             try {
               e.preventDefault();
+              console.log({username, email, password});
+              await AuthServices.registerUser({username, email, password});
+              
               alert('Registration Successful');
             } catch (error) {
               console.log(error);

@@ -26,6 +26,7 @@ const registerController = async(req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
         //save user
         const newUser = new userModel({ username, email, password:hashedPassword });
+        console.log("New User:", newUser);
         await newUser.save();
         res.status(201).send({
             success: true,

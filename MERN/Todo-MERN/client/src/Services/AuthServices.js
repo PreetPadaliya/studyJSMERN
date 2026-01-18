@@ -1,16 +1,16 @@
 import axios from 'axios';
 
-const registerUsre = (data) => {
+const registerUser = (data) => {
     return axios.post('/user/register', data);
 
 }
-const loginUsre = (data) => {
+const loginUser = (data) => {
     return axios.post('/user/login', data);
 }
 
 const AuthServices = {
-    registerUsre,
-    loginUsre
+    registerUser,
+    loginUser
 }
 
 export default AuthServices;

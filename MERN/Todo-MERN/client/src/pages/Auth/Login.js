@@ -12,8 +12,8 @@ const Login = () => {
     const loginHandler = async(e) => { 
        try {
         e.preventDefault();
-        const data = {email, password};
-        const res = await AuthServices.loginUsre(data);
+        const data = {email,password};
+        const res = await AuthServices.loginUser(data);
         console.log(res.data);
        } catch (error) {
         console.log(error);
