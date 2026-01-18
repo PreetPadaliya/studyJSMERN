@@ -1,25 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import AuthServices from '../../Services/AuthServices';
+import  toast from 'react-hot-toast';
 
 const Register = () => {
   const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
         
-    
+        const navigate = useNavigate();
         //register handler function
         const registerHandler = async (e) => { 
             try {
-              e.preventDefault();
-              console.log({username, email, password});
-              await AuthServices.registerUser({username, email, password});
-              
-              alert('Registration Successful');
-            } catch (error) {
-              console.log(error);
-            }
+        e.preventDefault();
+        const data = {email,password,username};
+        const res = await AuthServices.registerUser(data);
+        toast.success(res.data.message);
+        navigate('/login');
+        localStorage.setItem('todo',JSON.stringify(res.data));
+        console.log(res.data);
+       } catch (error) {
+        toast.error(error.response.data.message); 
+        console.log(error);
+       }
         }
   return (
     <div className='form-container'>

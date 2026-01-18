@@ -5,6 +5,7 @@ import Register from "./pages/Auth/Register";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Todolist from "./pages/Todos/Todolist";
+import  { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route path="/home" element={<Home />}/>
     <Route path="/todoList" element={<Todolist />}/>
     </Routes>
+    <Toaster />
     </div>
   );
 }

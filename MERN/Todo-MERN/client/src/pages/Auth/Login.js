@@ -1,24 +1,31 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import './AuthStyle.css'
 import AuthServices from '../../Services/AuthServices';
+import  toast from 'react-hot-toast';
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+
+    const navigate = useNavigate();
     //login handler function
     const loginHandler = async(e) => { 
        try {
         e.preventDefault();
         const data = {email,password};
         const res = await AuthServices.loginUser(data);
+        toast.success(res.data.message);
+        navigate('/home');
+        localStorage.setItem('todo',JSON.stringify(res.data));
         console.log(res.data);
        } catch (error) {
+        toast.error(error.response.data.message); 
         console.log(error);
        }
-    }
+    };
   return (
    <div className='form-container'>
     <div className='form'>
