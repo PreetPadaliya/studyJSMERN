@@ -11,14 +11,14 @@ module.exports = async (req, res, next) => {
                     message: "Unauthorized User"
                 });
             } else {
-                req.body.id = decoded.id;
+                req.userId = decoded.id;
                 next(); 
             }
-            }); 
-        }
+        }); 
+    }
     catch(error) {
         console.log(error);
-        res.status(400).send({
+        res.status(401).send({
             success: false,
             message: "Unauthorized Access",
             error

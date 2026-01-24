@@ -8,15 +8,14 @@ const todoSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    userId: {   
-        ref: 'users',
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-    },
     isCompleted: {
         type: Boolean,
         required: true,
         default: false
+    },
+      createdBy: {   
+        ref: 'users',
+        type: mongoose.Schema.ObjectId,
     },
 
 }, { timestamps: true });
