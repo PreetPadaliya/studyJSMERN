@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const user = JSON.parse(localStorage.getItem('todo'));
-
-//default auth header
-axios.defaults.headers.common['Authorization'] = `bearer ${user.token}`;
-
 //create todo
 const createTodo = (data) => {
-    return axios.post('/todo/create',data);
+    const user = JSON.parse(localStorage.getItem('todo'));
+    return axios.post('/todo/create', data, {
+        headers: {
+            'Authorization': `Bearer ${user?.token}`
+        }
+    });
 }
 
 const TodoServices = {createTodo};
