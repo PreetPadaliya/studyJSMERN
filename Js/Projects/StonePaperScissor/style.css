@@ -46,7 +46,7 @@ img{
     font-size: 2rem;
     font-weight: bold;
 }
-.msh-container{
+.msg-container{
     margin-top: 3rem;
 }
 
@@ -54,9 +54,8 @@ img{
     background-color: #081b31;
     color: white;
     height: 5rem;
-    line-height: 5rem;
-    margin-top: 3rem;
     font-size: 1.5rem;
     display: inline;
     border-radius: 5px;
+    padding: 1rem;
 }
