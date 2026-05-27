@@ -1,3 +1,4 @@
+//callbackHell - coz of using o f nested callback 
 function getData(dataId , getNextData){
     setTimeout(()=>{
         console.log("data",dataId);
