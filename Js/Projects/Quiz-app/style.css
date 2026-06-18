@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace
 }
 body{
     background-color: #10094d;
@@ -29,6 +30,7 @@ body{
     font-size: 18px;
     color: #10094d;
     font-weight: 400;
+    padding-bottom: 10px;
 }
 .btn{
    background: #fff;
@@ -40,5 +42,22 @@ body{
     margin: 10px 0;
     text-align: center;
     cursor: pointer;
-
+    transition: all 0.3s;
+}
+.btn:hover{
+    background: #10094d;
+    color: #fff;
+}
+#next-btn{
+    background: #10094d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
 }
