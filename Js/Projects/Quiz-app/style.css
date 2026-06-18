@@ -44,7 +44,7 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #10094d;
     color: #fff;
 }
@@ -60,4 +60,12 @@ body{
     cursor: pointer;
     transition: all 0.3s;
     display: none;
+}
+.correct{
+    background: #4CAF50;
+    color: #fff;
+}
+.incorrect{
+    background: #f44336;
+    color: #fff;
 }
